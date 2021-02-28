@@ -1,0 +1,86 @@
+<html>
+
+ <head>
+      <title> My Family Book </title>
+      <script rel="main.js"></script>
+  </head>
+
+   <body>
+        <h1 id="images"> My Family Book </h1>
+
+         <p id="names">  </p>
+
+        <img id="img1" src="Family Book.PNG">
+
+       <div>
+           <button type= "button" onclick="nextslide()"> Next </button>
+       </div>
+
+         <p id="relation">  </p>
+    </body>
+
+    <script>
+        var images = [ 
+    "Family Book.PNG",       
+    "momma.jpg",
+    "vighnesh.jpg",
+    "Aie.jpg",
+    "aaja.jpg",
+    "father.jpg"
+    ];
+    var names=[  
+    "", 
+    "Reema Kinlekar",
+    "Vighnesh Caskar",
+    "Janhvi Kinlekar",
+    "Ganpat Kinlekar",
+    "Narendra Caskar"
+     ];
+
+     var relation = [
+      "",
+      "My Mother",
+      "Myself",
+      "My Grandmother",
+      "My Grandfather",
+      "My Father",
+     ];
+
+    console.log(names);
+
+    console.log(relation)
+
+    var i = 0;
+
+    function nextslide(){
+
+   document.getElementById("names").innerHTML = names [i];
+
+   document.getElementById("img1").src = images [i];
+
+   document.getElementById("relation").innerHTML = relation [i];
+
+    i++;
+      };
+
+      if (i == 5) {
+          i == 0;
+      };
+    </script>
+
+    <style>
+
+    body {
+     text-align: center; 
+     margin-top: 50px;
+    }
+
+   img {
+    height: 350px;
+    width: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   }
+   </style>
+
+</html>
